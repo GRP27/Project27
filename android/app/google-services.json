@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1067308750554",
+    "project_id": "firsttoaid-fcaf3",
+    "storage_bucket": "firsttoaid-fcaf3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1067308750554:android:c8f82296daed19cd7af7e3",
+        "android_client_info": {
+          "package_name": "com.example.ftd.proj27"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1067308750554-a11m1ces3mfe02m6dd3fveedh7auh8cf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ftd.proj27",
+            "certificate_hash": "770ad6c911815486c64b3468b2fc6c9a3507dba9"
+          }
+        },
+        {
+          "client_id": "1067308750554-600fnp6ldn29g4t0uvh8r9ff1h5gf7bh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvOLxGsszlRN0CYIpb559G9kjjghvLDEc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1067308750554-600fnp6ldn29g4t0uvh8r9ff1h5gf7bh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
