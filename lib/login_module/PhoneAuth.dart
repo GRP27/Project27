@@ -227,7 +227,7 @@ class _PhoneAuthScreenState extends State<PhoneAuthScreen> {
               barrierDismissible: false,
                 context: context,
                 builder: (context){
-                return AlertDialog(
+                  return AlertDialog(
                   title: const Text("Enter OTP Code"),
                   content: Column(
                     mainAxisSize: MainAxisSize.min,
@@ -266,21 +266,10 @@ class _PhoneAuthScreenState extends State<PhoneAuthScreen> {
                               if (value == true) {
                                 //User exists
                                 await sp.getUserDataFromFirestore(sp.uid).then((
-                                    value) =>
-                                    sp.saveDataToSharedPreferences().then((
-                                        value) =>
-                                        sp.setSignIn().then((value) {
-                                          Navigator.push(context, MaterialPageRoute(builder: (context)=> HomePage()));
-                                        }
-                                        )));
+                                    value) => sp.setSignIn().then((value) {nextScreenReplaced(context, const HomePage());}));
                               } else {
                                 //User does not exist
-                                sp.saveDataToFirestore().then((value) =>
-                                    sp.saveDataToSharedPreferences().then((
-                                        value) =>
-                                        sp.setSignIn().then((value) {
-                                          Navigator.push(context, MaterialPageRoute(builder: (context)=> HomePage()));
-                                        })));
+                                sp.saveDataToFirestore().then((value) => sp.saveDataToSharedPreferences().then((value) => sp.setSignIn().then((value) {nextScreenReplaced(context, const HomePage());})));
                               }
                             });
                           },

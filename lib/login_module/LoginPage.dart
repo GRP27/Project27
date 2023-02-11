@@ -33,24 +33,55 @@ class _LoginPState extends State<LoginP> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(
-              height: size.height/ 2.2,
-              width:  size.width,
-              child: Lottie.asset('assets/2.json'),
+            Padding(
+              padding: const EdgeInsets.only(left: 70),
+              child: SizedBox(
+                width: size.width / 1.5,
+                height: size.height / 1.8,
+                child: Lottie.asset('assets/3.json'),
+              ),
             ),
+            Padding(
+              padding: const EdgeInsets.only(left: 70),
+              child: Column(
+                children: const <Widget> [
+                  Padding(
+                    padding: EdgeInsets.only(right: 70),
+                    child: Text(
+                        "Hold on! You will be logged in soon!",
+                        style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.w600,
+                        ),
+                        textAlign: TextAlign.center
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(right: 70, top: 15),
+                    child: Text(
+                      "Our lives at your service!",
+                      style: TextStyle(
+                        fontSize: 23,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 10,),
             const Text("Login using",
               style: TextStyle(
-                fontSize: 28,
+                fontSize: 18,
                 color: Colors.black,
                 fontWeight: FontWeight.w600,
               ),
             ),
-            SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.only(top: 20, left: 95, right: 95),
               child: RoundedLoadingButton(
                   borderRadius: 50,
-                  controller: googleController,
+                  controller: phoneController,
                   onPressed: (){
                     nextScreenReplaced(context, const PhoneAuthScreen());
                     phoneController.reset();
@@ -68,7 +99,7 @@ class _LoginPState extends State<LoginP> {
                         ),
                         const Padding(
                           padding:  EdgeInsets.only(left: 20),
-                          child: Text("Sign in with Phone",
+                          child: Text("Phone Number",
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 16,
@@ -94,7 +125,7 @@ class _LoginPState extends State<LoginP> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 20, left: 95, right: 95),
+              padding: const EdgeInsets.only(top: 20, left: 100, right: 100),
               child: RoundedLoadingButton(
                 borderRadius: 50,
                   controller: googleController,
@@ -108,8 +139,8 @@ class _LoginPState extends State<LoginP> {
                       children: [
                         Image.asset('assets/google.png'),
                         const Padding(
-                          padding:  EdgeInsets.only(left: 20),
-                          child: Text("Sign in with Google",
+                          padding:  EdgeInsets.only(left: 45),
+                          child: Text("Google",
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 16,
