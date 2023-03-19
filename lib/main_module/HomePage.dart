@@ -77,7 +77,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(top: 40),
+          padding: const EdgeInsets.only(top: 60),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.end,
@@ -113,8 +113,9 @@ class _HomePageState extends State<HomePage> {
                 height: 30,
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 10, right: 10),
+                padding: const EdgeInsets.only(left: 18, right: 18),
                 child: Card(
+                  color: Colors.white24,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
@@ -127,11 +128,35 @@ class _HomePageState extends State<HomePage> {
                     child: SizedBox(
                         height: size.height/4,
                         width: size.width,
-                        child: const Image(
-                          image: NetworkImage('https://images.unsplash.com/photo-1569336415962-a4bd9f69'
-                              'cd83?ixlib=rb-4.0.3&ix'
-                              'id=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx'
-                              '8&auto=format&fit=crop&w=1631&q=80'),
+                        child: Padding(
+                          padding: const EdgeInsets.only(right: 15, top: 30),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              Text('Quick',
+                                style: GoogleFonts.poppins(
+                                  color: Colors.pink,
+                                  fontSize: 40,
+                                  fontWeight: FontWeight.w400
+                                ),
+                              ),
+                              Text('Search!',
+                                style: GoogleFonts.poppins(
+                                    color: Colors.pink,
+                                    fontSize: 40,
+                                    fontWeight: FontWeight.w400
+                                ),
+                              ),
+                              Text('Tap here',
+                                style: GoogleFonts.poppins(
+                                    color: Colors.red,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w400
+                                ),
+                              ),
+                            ],
+                          ),
                         )
                     ),
                   ),
